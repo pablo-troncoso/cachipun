@@ -1,56 +1,88 @@
-//EDAD
-const edad;
-edad = prompt("Bienvenido, cuál es tu edad: ")
-if(edad >= 18) {
-alert("Muy bien eres mayor de edad para poder jugar al Cachipún");
-}
-else {
-alert("Aún no cumples con la edad requerida, intenta en unos años más.");
-}
+//JUEGOS
+var juegos = 1;
+var contadorJuegos = 1;
 
-
-
-// Usuario Ingresa Piedra, Pepel o Tijera
-decide = prompt("Hola! Escribe el número que quieres jugar. 1 para Piedra, 2 para Papel o 3 para Tijera: ");
-
-const unopiedra;
-const dospapel;
-const trestijera;
-
-
-if(decide === comp) {
-  alert("Empate!");
-}
-else {
-    alert("Empate!");
-
-}
-else {
-    alert("Empate!");
-
-}
-else {
-    alert("Empate!");
-
-}
-else {
-    alert("Empate!");
-
-}
-else {
-    alert("Empate!");
-
-}
-else {
-    alert("Empate!");
-
+// NÚMERO DE JUEGOS
+function comenzar() {
+    document.getElementById("contenedorJuego").style.display = "block";
+    document.getElementById("contenedorInicial").style.display = "none";
+    juegos = document.getElementById("juegos").value;
+    console.log(juegos);
 }
 
+//COMPARADOR RESULTADOS USUARIO VS COMPUTADOR
+function jugar(obj) {
+    var res;
+    var objetos = ["piedra", "papel", "tijera"];
 
+// JUEGOS
+    if (contadorJuegos <= juegos) {
 
+        var pc = Math.floor(Math.random() * 3);
 
+// COMPUTADOR
+        var movusuario = objetos[obj];
+        var movpc = objetos[pc]
 
+        // USUARIO y EL COMPUTADOR
+        document.getElementById("usuario").innerHTML = objetos[obj];
+        document.getElementById("pc").innerHTML = objetos[pc];
 
-  // Document.write al div con id="contenido"
-  document.write('<h1>RESTULTADO</h1>');
-  document.write('<p>Este es el resultado del juego.</p>');
+        if (movusuario == 'piedra') {
+            switch (movpc) {
+                case 'papel':
+                    res = "Perdiste, intenta de nuevo!";
+                    break;
+                case 'tijera':
+                    res = "Ganaste!!! :)";
+                    break;
+                default:
+                    res = "Empate";
+                    break;
+            }
+        } else if (movusuario == 'tijera') {
+            switch (movpc) {
+                case 'papel':
+                    res = "Ganaste!!! :)";
+                    break;
+                case 'tijera':
+                    res = "Empate";
+                    break;
+                default:
+                    res = "Perdiste, intenta de nuevo!";
+                    break;
+            }
+        } else {
+            switch (movpc) {
+                case 'papel':
+                    res = "Empate";
+                    break;
+                case 'tijera':
+                    res = "Perdiste, intenta de nuevo!";
+                    break;
+                default:
+                    res = "Ganaste!!! :)";
+                    break;
+            }
+        }
+
+//RESULTADO
+        document.getElementById("resultado").innerHTML = res;
+        document.getElementById("jugadasrestantes").innerHTML = juegos - contadorJuegos;
+        contadorJuegos++;
+
+    } else {
+        alert("FIN del Juego");
+        document.getElementById("btnNuevo").style.display = "block";
+    }
+
+}
+
+// NUEVO JUEGO
+function nuevoJuego() {
+    contadorJuegos = 1;
+    juegos = 1;
+    document.getElementById("btnNuevo").style.display = "none";
+    document.getElementById("contenedorJuego").style.display = "none";
+    document.getElementById("contenedorInicial").style.display = "block";
+}

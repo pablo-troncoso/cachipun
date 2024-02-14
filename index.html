@@ -9,23 +9,44 @@
 <!-- TÍTULO SITIO Y SUBTITULO -->
 
     <h1>CACHIPÚN</h1>
-    <h2>Selecciona con que quieres jugar:</h2>
+    <h2>Selecciona qué quieres jugar:</h2>
     <h3>(no voy a mirar cuando hagas click)</h2>
-     
-<!-- OPCIONES -->
 
+<!-- Botón para volver a jugar -->
+    <div style="width: 200px;margin: auto;">
+      <button id="btnNuevo" style="display: none;" onclick="nuevoJuego()">Volver a jugar</button>
+  </div>
+
+<!-- Contenedor con los botones y la selección de jugadas inicial -->
+  <div id="contenedorInicial">
+      <label for="juegos">¿Cuántas veces quieres jugar?:</label>
+      <input type="number" name="" id="rondas" min="1" value="1">
+      <button id="btnComenzar" onclick="comenzar()">Comenzar</button>
+  </div>
+     
+<!-- OPCIONES PIEDRA PAPEL TIJERA -->
       <div>
-        <a href="index.html"><button style="width: 150px; height: 50px;">Piedra</button></a>
-        <a href="e03.html"><button style="width: 150px; height: 50px;">Papel</button></a>
-        <a href="e04.html"><button style="width: 150px; height: 50px;">Tijera</button></a>
-      </div>
-<!-- RESULTADO -->
-      <div id="contenido">
-        <!-- Aquí se escribirá el contenido con JavaScript -->
+        <button style="width: 150px; height: 50px;" onclick="jugar(0)">Piedra</button>
+        <button style="width: 150px; height: 50px;" onclick="jugar(1)">Papel</button>
+        <button style="width: 150px; height: 50px;" onclick="jugar(2)">Tijera</button>
       </div>
       
+<!-- RESULTADO -->
+<div>
+  <h2>Tú Seleccionaste:</h2>
+  <h2 id="usuario"></h2>
 
+  <h2>Selección del Computador:</h2>
+  <h2 id="pc"></h2>
 
+  <h2>El Resultado es:</h2>
+  <h2 id="resultado"></h2>
+
+  <h3>Número de jugadas restantes:</h3>
+  <h3 id="jugadasrestantes"></h3>
+</div>
+
+</div>
 <!-- JAVASCRIPT -->
       <script src="assets/js/script.js"></script>
   </body>
