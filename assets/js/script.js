@@ -51,14 +51,6 @@ else {
 
 
 
-alert("El segundo número que ingresaste es
-positivo, Mayor o igual que 0");
-}
-if(num1 != 0 || num1 < 0) {
-alert("El primer número que ingresaste es
-distinto de 0 o es negativo");
-}
-
-  // Usamos document.write para agregar contenido al div con id="contenido"
-  document.write('<h1>Hola Mundo!</h1>');
-  document.write('<p>Este es un ejemplo de cómo modificar el HTML con JavaScript utilizando document.write.</p>');
+  // Document.write al div con id="contenido"
+  document.write('<h1>RESTULTADO</h1>');
+  document.write('<p>Este es el resultado del juego.</p>');
