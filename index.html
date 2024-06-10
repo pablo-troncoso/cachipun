@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<<<<<<< HEAD
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachipún</title>
+    <style>
+        /* Estilos para el contenido dinámico */
+        #usuario, #pc {
+            font-size: 24px; /* Tamaño de la letra grande */
+            text-transform: uppercase; /* Todo en mayúsculas */
+        }
+
+        /* Estilos específicos para el resultado */
+        #resultado {
+            font-size: 28px; /* Tamaño de la letra más grande */
+            font-weight: bold; /* Texto en negrita */
+            color: #d9534f; /* Color rojo para destacar más */
+            text-transform: uppercase; /* Todo en mayúsculas */
+        }
+
+        /* Estilos para los títulos normales sin negrita */
+        h3 {
+            font-weight: normal; /* Texto normal, no en negrita */
+        }
+
+        /* Estilos para centrar todo el contenido en la pantalla */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            text-align: center;
+            height: 100vh;
+        }
+
+        /* Mantener el título en la parte superior */
+        header {
+            margin-top: 20px;
+        }
+
+        /* Estilos para el contenedor inicial */
+        #contenedorInicial {
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* Centrar el contenido del juego en la pantalla */
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px; /* Espacio debajo de la selección inicial */
+        }
+
+        /* Centrar el botón de volver a jugar */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- TÍTULO SITIO -->
+    <header>
+        <h1>CACHIPÚN</h1>
+    </header>
+  
+    <!-- Input para el número de juegos y botón Comenzar en una línea -->
+    <div id="contenedorInicial">
+        <span>Selecciona cuántas veces quieres jugar:</span>
+        <input type="number" id="juegos" placeholder="Número de juegos" min="1">
+        <button onclick="comenzar()">Comenzar</button>
+    </div>
+
+    <!-- Contenedor principal del juego -->
+    <div class="game-container">
+        <!-- Área del juego -->
+        <div id="contenedorJuego" style="display: none;">
+            <h3>Selecciona tu movimiento:</h3>
+            <button onclick="jugar(0)">Piedra</button>
+            <button onclick="jugar(1)">Papel</button>
+            <button onclick="jugar(2)">Tijera</button>
+
+            <div>
+                <h3>Tu movimiento:</h3>
+                <p id="usuario"></p>
+            </div>
+            <div>
+                <h3>Movimiento del Computador:</h3>
+                <p id="pc"></p>
+            </div>
+            <div>
+                <h3>Resultado:</h3>
+                <p id="resultado"></p> <!-- Elemento para mostrar el resultado -->
+            </div>
+            <div>
+                <h3>Juegos restantes:</h3>
+                <p id="juegosRestantes"></p> <!-- Elemento para mostrar los juegos restantes -->
+            </div>
+        </div>
+
+        <!-- Botón para volver a jugar -->
+        <div class="button-container">
+            <button id="btnNuevo" style="display: none;" onclick="nuevoJuego()">Volver a jugar</button>
+        </div>
+    </div>
+
+    <!-- Incluir el archivo JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pablo Troncoso</title>
+  </head>
+  <body>
+<!-- TÍTULO SITIO Y SUBTITULO -->
+
+    <h1>CACHIPÚN</h1>
+    <h2>Selecciona qué quieres jugar:</h2>
+    <h3>(no voy a mirar cuando hagas click)</h2>
+
+<!-- Botón para volver a jugar -->
+    <div style="width: 200px;margin: auto;">
+      <button id="btnNuevo" style="display: none;" onclick="nuevoJuego()">Volver a jugar</button>
+  </div>
+
+<!-- Contenedor con los botones y la selección de jugadas inicial -->
+  <div id="contenedorInicial">
+      <label for="juegos">¿Cuántas veces quieres jugar?:</label>
+      <input type="number" name="" id="rondas" min="1" value="1">
+      <button id="btnComenzar" onclick="comenzar()">Comenzar</button>
+  </div>
+     
+<!-- OPCIONES PIEDRA PAPEL TIJERA -->
+      <div>
+        <button style="width: 150px; height: 50px;" onclick="jugar(0)">Piedra</button>
+        <button style="width: 150px; height: 50px;" onclick="jugar(1)">Papel</button>
+        <button style="width: 150px; height: 50px;" onclick="jugar(2)">Tijera</button>
+      </div>
+      
+<!-- RESULTADO -->
+<div>
+  <h2>Tú Seleccionaste:</h2>
+  <h2 id="usuario"></h2>
+
+  <h2>Selección del Computador:</h2>
+  <h2 id="pc"></h2>
+
+  <h2>El Resultado es:</h2>
+  <h2 id="resultado"></h2>
+
+  <h3>Número de jugadas restantes:</h3>
+  <h3 id="jugadasrestantes"></h3>
+</div>
+
+</div>
+<!-- JAVASCRIPT -->
+      <script src="assets/js/script.js"></script>
+  </body>
+</html>
+>>>>>>> origin/main
