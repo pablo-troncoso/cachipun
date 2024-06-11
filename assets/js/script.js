@@ -2,6 +2,13 @@
 let juegos = 1;
 let contadorJuegos = 1;
 
+// Íconos para los movimientos
+const iconos = [
+    '<i class="fa-regular fa-hand-back-fist icono"></i>', // Piedra
+    '<i class="fa-regular fa-hand icono"></i>', // Papel
+    '<i class="fa-regular fa-hand-scissors icono"></i>' // Tijera
+];
+
 // NÚMERO DE JUEGOS
 function comenzar() {
     document.getElementById("contenedorJuego").style.display = "block";
@@ -26,8 +33,8 @@ function jugar(obj) {
         let movpc = objetos[pc];
 
         // MOSTRAR RESULTADOS DEL USUARIO Y EL COMPUTADOR
-        document.getElementById("usuario").innerHTML = objetos[obj];
-        document.getElementById("pc").innerHTML = objetos[pc];
+        document.getElementById("usuario").innerHTML = iconos[obj]; // Mostrar el ícono para el movimiento del usuario
+        document.getElementById("pc").innerHTML = iconos[pc]; // Mostrar el ícono para el movimiento del computador
 
         // LÓGICA PARA DETERMINAR EL GANADOR
         if (movusuario == 'piedra') {

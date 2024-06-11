@@ -7,11 +7,15 @@
     <!-- Author: Pablo Troncoso -->
     <!-- Archivo CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f583e46d6e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- TÍTULO -->
     <header>
-        <h1>CACHIPÚN</h1>
+        <h1 class="titulo">CACHIPÚN</h1>
     </header>
   
     <!-- Input Número de juegos y Botón Comenzar -->
@@ -23,30 +27,35 @@
 
     <!-- Juego -->
     <div class="game-container">
-        <!-- Área del juego -->
-        <div id="contenedorJuego" style="display: none;">
-            <h3>Selecciona tu movimiento:</h3>
-            <button onclick="jugar(0)">Piedra</button>
-            <button onclick="jugar(1)">Papel</button>
-            <button onclick="jugar(2)">Tijera</button>
+       <!-- Área del juego -->
+<div id="contenedorJuego" style="display: none;">
+    <h3>Selecciona tu movimiento:</h3>
+    <i class="fa-regular fa-hand-back-fist icono" onclick="jugar(0)" title="Piedra"></i>
+    <i class="fa-regular fa-hand icono" onclick="jugar(1)" title="Papel"></i>
+    <i class="fa-regular fa-hand-scissors icono" onclick="jugar(2)" title="Tijera"></i>
 
-            <div>
-                <h3>Tu movimiento:</h3>
-                <p id="usuario"></p>
-            </div>
-            <div>
-                <h3>Movimiento del Computador:</h3>
-                <p id="pc"></p>
-            </div>
-            <div>
-                <h3>Resultado:</h3>
-                <p id="resultado"></p> <!-- Mostrar el resultado -->
-            </div>
-            <div>
-                <h3>Juegos Restantes:</h3>
-                <p id="juegosRestantes"></p> <!-- Mostrar Juegos restantes -->
-            </div>
+    <!-- Contenedor para alinear "Tu movimiento" y "Movimiento del Computador" -->
+    <div class="movimientos-container">
+        <div>
+            <h3>Tú:</h3>
+            <p id="usuario"></p>
         </div>
+        <div>
+            <h3>Computador:</h3>
+            <p id="pc"></p>
+        </div>
+    </div>
+    
+    <div>
+        <h3>Resultado:</h3>
+        <p id="resultado"></p> <!-- Mostrar el resultado -->
+    </div>
+    <div>
+        <h3>Juegos Restantes:</h3>
+        <p id="juegosRestantes"></p> <!-- Mostrar Juegos restantes -->
+    </div>
+</div>
+
 
         <!-- Volver a Jugar -->
         <div class="button-container">
@@ -56,5 +65,7 @@
 
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
+
+
 </body>
 </html>

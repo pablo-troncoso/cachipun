@@ -1,20 +1,25 @@
+/* Fondo */
+body {
+    background-color: #f5f5f5; 
+}
+
 /* Estilo Usuario y Computador */
 #usuario, #pc {
-    font-size: 24px; /* Tamaño de la letra grande */
-    text-transform: uppercase; /* Todo en mayúsculas */
+    font-size: 24px; 
+    text-transform: uppercase; 
 }
 
 /* Estilo Resultado */
 #resultado {
     font-size: 28px; 
     font-weight: bold; 
-    color: #16027b; 
-    text-transform: uppercase; /* Mayúsculas */
+    color: #007bff; 
+    text-transform: uppercase; 
 }
 
 /* Estilo Títulos */
 h3 {
-    font-weight: normal; /* Texto normal, no en negrita */
+    font-weight: normal; 
 }
 
 /* Centrar Contenido */
@@ -39,7 +44,7 @@ header {
     display: inline-block;
 }
 
-/* Centrar el Juego */
+/* Centrar Juego */
 .game-container {
     display: flex;
     flex-direction: column;
@@ -55,3 +60,149 @@ header {
     width: 100%;
     margin-top: 20px;
 }
+
+/* Título */
+header h1 {
+    color: #007bff; 
+}
+
+
+/* Estilos Íconos */
+.icono {
+    font-size: 48px; 
+    cursor: pointer; 
+    margin: 10px; 
+    color: #333; 
+}
+
+.icono:hover {
+    color: #007bff; 
+}
+
+/* Texto "Tu movimiento" */
+#usuario {
+    font-weight: bold; 
+}
+
+/* Texto "Movimiento del Computador" */
+#pc {
+    font-weight: bold; 
+}
+
+/* Alinear "Tu movimiento" y "Movimiento del Computador" */
+.movimientos-container {
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 20px; 
+    width: 100%; 
+}
+
+/* Estilos para los Textos */
+.movimientos-container div {
+    flex: 1; 
+    text-align: center; 
+}
+
+/* Estilos Íconos */
+.icono {
+    font-size: 48px; 
+    cursor: pointer; 
+    margin: 10px; 
+    color: #333; 
+}
+
+.icono:hover {
+    color: #007bff; 
+}
+
+/* Asegurar que los íconos en la sección "Tu movimiento" se vean bien */
+#usuario i, #pc i {
+    font-size: 48px; 
+    margin: 10px; 
+    color: #333; 
+}
+
+/* Aplicar la fuente Roboto a todo el cuerpo del documento */
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f5f5f5; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    text-align: center;
+    height: 100vh;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
