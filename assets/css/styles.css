@@ -1,208 +1,140 @@
 /* Fondo */
 body {
-    background-color: #f5f5f5; 
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif; /* Aplicar Roboto a todo el texto del cuerpo */
 }
 
 /* Estilo Usuario y Computador */
 #usuario, #pc {
-    font-size: 24px; 
-    text-transform: uppercase; 
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 /* Estilo Resultado */
 #resultado {
-    font-size: 28px; 
-    font-weight: bold; 
-    color: #007bff; 
-    text-transform: uppercase; 
+  font-size: 36px !important; /* Aumentar el tamaño del resultado */
+  font-weight: bold !important; /* Negrita */
+  color: #007bff; /* Azul */
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* Estilo Títulos */
 h3 {
-    font-weight: normal; 
+  font-weight: normal;
+  font-size: 16px; /* Reducir el tamaño de los títulos */
+  text-align: center; /* Centrar los títulos */
 }
 
 /* Centrar Contenido */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-    text-align: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  text-align: center;
+  height: 100vh;
 }
 
 /* Título */
 header {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* Contenedor Inicio */
 #contenedorInicial {
-    margin-top: 20px;
-    display: inline-block;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Agregar espacio entre el input y el botón */
+#contenedorInicial input {
+  margin-right: 10px; /* Ajusta el valor según el espacio deseado */
 }
 
 /* Centrar Juego */
 .game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Botón Volver a Jugar */
 .button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px; /* Reducir el margen para elevar el botón */
 }
 
 /* Título */
 header h1 {
-    color: #007bff; 
+  color: #007bff;
 }
-
 
 /* Estilos Íconos */
 .icono {
-    font-size: 48px; 
-    cursor: pointer; 
-    margin: 10px; 
-    color: #333; 
+  font-size: 70px; /* Aumentar el tamaño de los íconos */
+  cursor: pointer;
+  margin: 10px;
+  color: #333;
 }
 
 .icono:hover {
-    color: #007bff; 
+  color: #007bff;
 }
 
-/* Texto "Tu movimiento" */
-#usuario {
-    font-weight: bold; 
-}
-
-/* Texto "Movimiento del Computador" */
-#pc {
-    font-weight: bold; 
-}
-
-/* Alinear "Tu movimiento" y "Movimiento del Computador" */
+/* Alinear "Tu movimiento" y "Movimiento del Computador" en una línea */
 .movimientos-container {
-    display: flex; 
-    justify-content: space-around; 
-    margin-top: 20px; 
-    width: 100%; 
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
 }
 
-/* Estilos para los Textos */
-.movimientos-container div {
-    flex: 1; 
-    text-align: center; 
+/* Mantener los íconos centrados en la sección de selección */
+#contenedorJuego i {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-/* Estilos Íconos */
-.icono {
-    font-size: 48px; 
-    cursor: pointer; 
-    margin: 10px; 
-    color: #333; 
+/* Mantener el tamaño de los íconos */
+#usuario i, #pc i {
+  font-size: 48px;
+  margin: 10px;
+  color: #333;
 }
 
-.icono:hover {
-    color: #007bff; 
+/* Reducir el tamaño y quitar negrita para algunos textos */
+#contenedorJuego h3, #contenedorJuego p {
+  font-weight: normal;
+  font-size: 14px; /* Ajusta según prefieras */
+}
+
+/* Centrar "Selecciona tu movimiento", "Resultado" y "Juegos Restantes" */
+#contenedorJuego h3 {
+  text-align: center; /* Centrar el texto de los títulos */
+}
+
+#resultado {
+  text-align: center; /* Centrar el texto del resultado */
+  font-size: 36px !important; /* Tamaño de letra ligeramente mayor */
+  font-weight: bold !important; /* Asegurar que sea en negrita */
+  color: #007bff !important; /* Color azul */
+}
+
+#juegosRestantes {
+  text-align: center; /* Centrar el texto de juegos restantes */
 }
 
 /* Asegurar que los íconos en la sección "Tu movimiento" se vean bien */
 #usuario i, #pc i {
-    font-size: 48px; 
-    margin: 10px; 
-    color: #333; 
+  font-size: 48px;
+  margin: 10px;
+  color: #333;
 }
-
-/* Aplicar la fuente Roboto a todo el cuerpo del documento */
-body {
-    font-family: 'Roboto', sans-serif; 
-    background-color: #f5f5f5; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-    text-align: center;
-    height: 100vh;
-}
-
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }

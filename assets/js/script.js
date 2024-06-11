@@ -40,7 +40,7 @@ function jugar(obj) {
         if (movusuario == 'piedra') {
             switch (movpc) {
                 case 'papel':
-                    res = "Perdiste, intenta de nuevo!";
+                    res = "Perdiste!";
                     break;
                 case 'tijera':
                     res = "Ganaste!";
@@ -51,7 +51,7 @@ function jugar(obj) {
         } else if (movusuario == 'papel') {
             switch (movpc) {
                 case 'tijera':
-                    res = "Perdiste, intenta de nuevo!";
+                    res = "Perdiste!";
                     break;
                 case 'piedra':
                     res = "Ganaste!";
@@ -62,7 +62,7 @@ function jugar(obj) {
         } else if (movusuario == 'tijera') {
             switch (movpc) {
                 case 'piedra':
-                    res = "Perdiste, intenta de nuevo!";
+                    res = "Perdiste!";
                     break;
                 case 'papel':
                     res = "Ganaste!";

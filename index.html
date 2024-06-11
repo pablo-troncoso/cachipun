@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f583e46d6e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <!-- TÍTULO -->
@@ -19,53 +20,58 @@
     </header>
   
     <!-- Input Número de juegos y Botón Comenzar -->
-    <div id="contenedorInicial">
+    <div id="contenedorInicial" class="d-flex flex-column align-items-center">
         <span>Selecciona cuántas veces quieres jugar:</span>
-        <input type="number" id="juegos" placeholder="Número de juegos" min="1">
-        <button onclick="comenzar()">Comenzar</button>
+        <div class="d-flex align-items-center mt-2">
+            <input type="number" id="juegos" placeholder="Número de juegos" min="1" class="form-control d-inline-block" style="width: auto;">
+            <button onclick="comenzar()" class="btn btn-primary ml-2">Comenzar</button>
+        </div>
     </div>
 
     <!-- Juego -->
     <div class="game-container">
-       <!-- Área del juego -->
-<div id="contenedorJuego" style="display: none;">
-    <h3>Selecciona tu movimiento:</h3>
-    <i class="fa-regular fa-hand-back-fist icono" onclick="jugar(0)" title="Piedra"></i>
-    <i class="fa-regular fa-hand icono" onclick="jugar(1)" title="Papel"></i>
-    <i class="fa-regular fa-hand-scissors icono" onclick="jugar(2)" title="Tijera"></i>
+        <!-- Área del juego -->
+        <div id="contenedorJuego" style="display: none;">
+            <h3>Selecciona tu movimiento:</h3>
+            <div class="iconos">
+                <i class="fa-regular fa-hand-back-fist icono" onclick="jugar(0)" title="Piedra"></i>
+                <i class="fa-regular fa-hand icono" onclick="jugar(1)" title="Papel"></i>
+                <i class="fa-regular fa-hand-scissors icono" onclick="jugar(2)" title="Tijera"></i>
+            </div>
 
-    <!-- Contenedor para alinear "Tu movimiento" y "Movimiento del Computador" -->
-    <div class="movimientos-container">
-        <div>
-            <h3>Tú:</h3>
-            <p id="usuario"></p>
+            <!-- Contenedor para alinear "Tu movimiento" y "Movimiento del Computador" -->
+            <div class="movimientos-container">
+                <div>
+                    <h3>Tú:</h3>
+                    <p id="usuario"></p>
+                </div>
+                <div>
+                    <h3>Computador:</h3>
+                    <p id="pc"></p>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Resultado:</h3>
+                <p id="resultado"></p> <!-- Mostrar el resultado -->
+            </div>
+            <div>
+                <h3>Juegos Restantes:</h3>
+                <p id="juegosRestantes"></p> <!-- Mostrar Juegos restantes -->
+            </div>
         </div>
-        <div>
-            <h3>Computador:</h3>
-            <p id="pc"></p>
-        </div>
-    </div>
-    
-    <div>
-        <h3>Resultado:</h3>
-        <p id="resultado"></p> <!-- Mostrar el resultado -->
-    </div>
-    <div>
-        <h3>Juegos Restantes:</h3>
-        <p id="juegosRestantes"></p> <!-- Mostrar Juegos restantes -->
-    </div>
-</div>
-
 
         <!-- Volver a Jugar -->
         <div class="button-container">
-            <button id="btnNuevo" style="display: none;" onclick="nuevoJuego()">Volver a jugar</button>
+            <button id="btnNuevo" style="display: none;" onclick="nuevoJuego()" class="btn btn-secondary">Volver a jugar</button>
         </div>
     </div>
 
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
 
+    <!-- Dependencia de JavaScript de Bootstrap: Bootstrap JS bundle (incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
