@@ -14,7 +14,7 @@ body {
 #resultado {
   font-size: 36px !important; 
   font-weight: bold !important; 
-  color: #007bff; 
+  color: #007bff !important; 
   text-transform: uppercase;
   text-align: center;
   margin-top: 10px;
@@ -50,7 +50,7 @@ header {
   align-items: center;
 }
 
-/* Espacio entre input y botón */
+/* Espacio Input y Botón */
 #contenedorInicial input {
   margin-right: 10px; 
 }
@@ -89,7 +89,7 @@ header h1 {
   color: #007bff;
 }
 
-/* Movimientos en una Línea */
+/* Alinear "Tu movimiento" y "Movimiento del Computador" */
 .movimientos-container {
   display: flex;
   justify-content: space-around;
@@ -97,44 +97,48 @@ header h1 {
   width: 100%;
 }
 
-/* Íconos Centrados en Selección */
+/* Mantener los Íconos Centrados */
 #contenedorJuego i {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* Mantener Tamaño de los íconos */
+/* Tamaño de los íconos */
 #usuario i, #pc i {
   font-size: 48px;
   margin: 10px;
   color: #333;
 }
 
-/* Reducir el tamaño y quitar negrita para algunos textos */
+/* Reducir el tamaño y quitar negrita Textos */
 #contenedorJuego h3, #contenedorJuego p {
   font-weight: normal;
   font-size: 14px; 
 }
 
-/* Centrar */
+/* Centrar "Selecciona tu movimiento", "Resultado" y "Juegos Restantes" */
 #contenedorJuego h3 {
-  text-align: center; 
+  text-align: center;
 }
 
 #resultado {
   text-align: center; 
-  font-size: 36px !important; 
-  font-weight: bold !important; 
-  color: #007bff !important; 
 }
 
 #juegosRestantes {
   text-align: center; 
 }
 
-/* Íconos Sección Tu movimiento */
+/* Íconos */
 #usuario i, #pc i {
   font-size: 48px;
   margin: 10px;
   color: #333;
+}
+
+/* Estilos Contadores Resultados */
+.resultados-container p {
+  margin: 5px 0; 
+  display: flex;
+  justify-content: center; 
 }

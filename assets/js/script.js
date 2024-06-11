@@ -1,8 +1,11 @@
-// JUEGOS
+// Variables Contadores
 let juegos = 1;
 let contadorJuegos = 1;
+let victorias = 0;
+let empates = 0;
+let derrotas = 0;
 
-// Íconos para los movimientos
+// Íconos Movimientos
 const iconos = [
     '<i class="fa-regular fa-hand-back-fist icono"></i>', // Piedra
     '<i class="fa-regular fa-hand icono"></i>', // Papel
@@ -17,6 +20,7 @@ function comenzar() {
     console.log("Número de juegos: ", juegos);
     contadorJuegos = 1; // Reiniciar el contador de juegos cada vez que se comienza
     actualizarJuegosRestantes(); // Mostrar los juegos restantes al inicio
+    resetearContadores(); // Reiniciar los contadores de resultados
 }
 
 // COMPARADOR RESULTADOS USUARIO VS COMPUTADOR
@@ -41,34 +45,43 @@ function jugar(obj) {
             switch (movpc) {
                 case 'papel':
                     res = "Perdiste!";
+                    derrotas++;
                     break;
                 case 'tijera':
                     res = "Ganaste!";
+                    victorias++;
                     break;
                 default:
                     res = "Empate!";
+                    empates++;
             }
         } else if (movusuario == 'papel') {
             switch (movpc) {
                 case 'tijera':
                     res = "Perdiste!";
+                    derrotas++;
                     break;
                 case 'piedra':
                     res = "Ganaste!";
+                    victorias++;
                     break;
                 default:
                     res = "Empate!";
+                    empates++;
             }
         } else if (movusuario == 'tijera') {
             switch (movpc) {
                 case 'piedra':
                     res = "Perdiste!";
+                    derrotas++;
                     break;
                 case 'papel':
                     res = "Ganaste!";
+                    victorias++;
                     break;
                 default:
                     res = "Empate!";
+                    empates++;
             }
         }
 
@@ -76,6 +89,7 @@ function jugar(obj) {
         document.getElementById("resultado").innerHTML = res;
         contadorJuegos++;
         actualizarJuegosRestantes(); // Actualizar los juegos restantes después de cada turno
+        actualizarContadores(); // Actualizar los contadores de victorias, empates y derrotas
     }
 
     // SI SE TERMINAN LOS JUEGOS
@@ -95,9 +109,23 @@ function nuevoJuego() {
     document.getElementById("juegos").value = "";
     contadorJuegos = 1;
     juegos = 1;
+    resetearContadores(); // Reiniciar los contadores de resultados
 }
 
 function actualizarJuegosRestantes() {
     let juegosRestantes = juegos - contadorJuegos + 1; // Calcula los juegos restantes
-    document.getElementById("juegosRestantes").innerHTML = juegosRestantes > 0 ? juegosRestantes : 0;
+    document.getElementById("juegosRestantes").innerHTML = `Juegos Restantes: ${juegosRestantes > 0 ? juegosRestantes : 0}`;
+}
+
+function actualizarContadores() {
+    document.getElementById("victorias").innerHTML = `Victorias: ${victorias}`;
+    document.getElementById("empates").innerHTML = `Empates: ${empates}`;
+    document.getElementById("derrotas").innerHTML = `Derrotas: ${derrotas}`;
+}
+
+function resetearContadores() {
+    victorias = 0;
+    empates = 0;
+    derrotas = 0;
+    actualizarContadores();
 }
