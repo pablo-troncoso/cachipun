@@ -1,34 +1,7 @@
 /* Fondo */
 body {
   background-color: #f5f5f5;
-  font-family: 'Roboto', sans-serif; 
-}
-
-/* Estilo Usuario y Computador */
-#usuario, #pc {
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-/* Estilo Resultado */
-#resultado {
-  font-size: 36px !important; 
-  font-weight: bold !important; 
-  color: #007bff !important; 
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Estilo Títulos */
-h3 {
-  font-weight: normal;
-  font-size: 16px; 
-  text-align: center; 
-}
-
-/* Centrar Contenido */
-body {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,102 +16,221 @@ header {
   margin-top: 20px;
 }
 
-/* Contenedor Inicio */
+header h1 {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Efecto de aparición rápida para el título */
+.title-appear {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s, transform 0.3s; /* Efecto de aparición rápida para el título */
+}
+
+.title-appear.selected {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Contenedor Inicial */
 #contenedorInicial {
-  margin-top: 20px;
-  display: inline-flex;
+  margin-top: 20px; /* Mantener este margen superior para el estado inicial */
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-/* Espacio Input y Botón */
-#contenedorInicial input {
-  margin-right: 10px; 
+#contenedorInicial span {
+  font-size: 16px; /* Tamaño de letra reducido */
+  margin-bottom: 15px; /* Espacio entre el texto y los inputs */
+  font-weight: normal; /* Quitar la negrita */
 }
 
-/* Centrar Juego */
+#contenedorInicial .input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el input y el botón */
+}
+
+/* Estilo para el input de número de juegos */
+#juegos {
+  width: 150px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#juegos:focus {
+  border-color: #007bff;
+}
+
+/* Estilo para el botón de comenzar */
+#contenedorInicial button {
+  padding: 5px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#contenedorInicial button:hover {
+  background-color: #0056b3;
+}
+
+#contenedorInicial button:active {
+  transform: scale(0.98);
+}
+
+/* Contenedor del juego */
 .game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  padding-bottom: 20px; /* Reducir el espacio inferior */
 }
 
-/* Botón Volver a Jugar */
-.button-container {
+/* Alinear los íconos verticalmente bajo sus títulos */
+.movimiento-seleccion, .movimiento-computador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px; /* Espacio horizontal entre los contenedores */
+}
+
+/* Íconos */
+.iconos {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-top: 10px; 
+  margin-top: 10px; /* Espacio encima de los íconos */
 }
 
-/* Título */
-header h1 {
-  color: #007bff;
-}
-
-/* Estilos Íconos */
 .icono {
-  font-size: 70px; 
+  font-size: 60px; /* Tamaño del icono */
   cursor: pointer;
-  margin: 10px;
+  margin: 5px;
   color: #333;
+  transition: color 0.3s, transform 0.3s; /* Añadir transición para un efecto suave */
 }
 
-.icono:hover {
-  color: #007bff;
+.icono:hover, .icono.selected {
+  color: #007bff; /* Color azul para el icono seleccionado o en hover */
+  transform: scale(1.05); /* Agrandar ligeramente el icono seleccionado */
 }
 
-/* Alinear "Tu movimiento" y "Movimiento del Computador" */
-.movimientos-container {
+/* Contenedor para selección de movimiento */
+.seleccion-movimiento {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  width: 100%;
+  align-items: flex-start; /* Alinear los elementos en la parte superior */
+  justify-content: center;
+  margin-bottom: 20px; /* Añadir margen inferior para separar del resultado */
 }
 
-/* Mantener los Íconos Centrados */
-#contenedorJuego i {
-  display: inline-block;
-  margin: 0 10px;
+/* Espacio para resultados */
+.resultados-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px; /* Reducir margen superior */
+  gap: 5px; /* Reducir el espaciado entre los elementos */
 }
 
-/* Tamaño de los íconos */
-#usuario i, #pc i {
-  font-size: 48px;
-  margin: 10px;
-  color: #333;
-}
-
-/* Reducir el tamaño y quitar negrita Textos */
-#contenedorJuego h3, #contenedorJuego p {
+/* Mantener espacio debajo de la sección de resultados */
+#contenedorJuego h3,
+#contenedorJuego p {
   font-weight: normal;
-  font-size: 14px; 
-}
-
-/* Centrar "Selecciona tu movimiento", "Resultado" y "Juegos Restantes" */
-#contenedorJuego h3 {
+  font-size: 14px;
+  margin-top: 5px; /* Reducir espacio superior */
+  min-height: 20px; /* Reducir altura mínima para evitar saltos en el diseño */
   text-align: center;
 }
 
 #resultado {
-  text-align: center; 
+  font-size: 36px !important;
+  font-weight: bold !important;
+  color: #007bff !important;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
 }
 
-#juegosRestantes {
-  text-align: center; 
+/* Placeholder para mantener espacio cuando no hay resultado */
+.movimiento-placeholder {
+  min-height: 48px; /* Altura de los íconos de movimiento */
 }
 
-/* Íconos */
-#usuario i, #pc i {
-  font-size: 48px;
-  margin: 10px;
-  color: #333;
+.resultado-placeholder {
+  min-height: 36px; /* Altura del texto de resultado */
 }
 
-/* Estilos Contadores Resultados */
-.resultados-container p {
-  margin: 5px 0; 
+/* Estilo compactado para los contadores */
+.resultados-row {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  gap: 20px; /* Espaciado entre los contadores */
+}
+
+.resultados-row p {
+  margin: 0;
+  font-weight: bold; /* Negrita para los contadores */
+}
+
+/* Estilos para el icono de reset */
+.icon-reset {
+  font-size: 24px; /* Tamaño más pequeño del icono */
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+  margin-top: 10px; /* Espacio encima del icono */
+}
+
+.icon-reset:hover {
+  color: #007bff;
+}
+
+/* Animación de presionado */
+@keyframes pressEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); /* Reducir tamaño al presionar */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Aplicar animación de presionado */
+.icon-reset.pressed {
+  animation: pressEffect 0.2s ease-in-out;
+  color: #007bff;
+}
+
+/* Botón de resetear */
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Efecto de aparición rápida para el ícono del computador */
+.icon-appear {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.1s, transform 0.1s; /* Efecto de aparición rápida */
+}
+
+.icon-appear.selected {
+  opacity: 1;
+  transform: scale(1);
 }
