@@ -16,13 +16,11 @@ header {
   margin-top: 20px;
 }
 
-/* Título */
 header h1 {
   color: #007bff;
   font-weight: bold;
-  font-size: 3rem; /* Puedes ajustar este valor para cambiar el tamaño */
+  font-size: 3rem; /* Puedes ajustar este valor para cambiar el tamaño del texto "CACHIPÚN" */
 }
-
 
 /* Efecto de aparición rápida para el título */
 .title-appear {
@@ -236,4 +234,14 @@ header h1 {
 .icon-appear.selected {
   opacity: 1;
   transform: scale(1);
+}
+
+/* Específico para rotar el ícono de tijera en la selección de movimiento del jugador */
+#tijera {
+  transform: scaleX(-1); /* Invertir horizontalmente el ícono de tijera */
+}
+
+/* Mantener el estilo original para el ícono de tijera en la selección del computador */
+.movimiento-computador #tijera {
+  transform: none; /* Asegurarse de que el estilo del ícono del computador no cambie */
 }
