@@ -16,10 +16,13 @@ header {
   margin-top: 20px;
 }
 
+/* Título */
 header h1 {
   color: #007bff;
   font-weight: bold;
+  font-size: 3rem; /* Puedes ajustar este valor para cambiar el tamaño */
 }
+
 
 /* Efecto de aparición rápida para el título */
 .title-appear {
