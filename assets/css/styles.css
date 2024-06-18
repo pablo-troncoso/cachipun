@@ -11,15 +11,46 @@ body {
   height: 100vh;
 }
 
-/* Título */
-header {
-  margin-top: 20px;
+/* Título e Icono */
+.header {
+  display: flex;
+  flex-direction: column; /* Alinear el icono y el título verticalmente */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Ajustar espacio entre el icono y el título */
+  margin-top: 20px; /* Mantener margen superior para bajar el icono y el título */
 }
 
 header h1 {
   color: #007bff;
   font-weight: bold;
-  font-size: 3rem; /* Puedes ajustar este valor para cambiar el tamaño del texto "CACHIPÚN" */
+  font-size: 3rem; /* Ajustar el tamaño del texto "CACHIPÚN" */
+  margin-bottom: 0px; /* Reducir margen inferior para acercar al resto del contenido */
+}
+
+/* Estilo del icono de enlace al sitio web */
+.icono-sitio-web {
+  width: 50px; /* Reducir el tamaño del icono */
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: fadeInFast 0.3s ease-out; /* Añadir animación de aparición rápida */
+  margin-bottom: -40px; /* Ajustar el margen inferior para acercar al texto "CACHIPÚN" */
+}
+
+/* Animación de aparición rápida */
+@keyframes fadeInFast {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.icono-sitio-web:hover {
+  transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
 }
 
 /* Efecto de aparición rápida para el título */
@@ -96,7 +127,7 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px; /* Reducir margen superior para acercar al título */
   padding-bottom: 20px; /* Reducir el espacio inferior */
 }
 
@@ -105,7 +136,11 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 20px; /* Espacio horizontal entre los contenedores */
+  margin: 0 10px; /* Reducir espacio horizontal entre los contenedores */
+}
+
+h3 {
+  margin: 10px 0; /* Reducir el margen vertical en los títulos */
 }
 
 /* Íconos */
@@ -133,7 +168,7 @@ header h1 {
   display: flex;
   align-items: flex-start; /* Alinear los elementos en la parte superior */
   justify-content: center;
-  margin-bottom: 20px; /* Añadir margen inferior para separar del resultado */
+  margin-bottom: 10px; /* Reducir margen inferior para separar del resultado */
 }
 
 /* Espacio para resultados */
@@ -162,6 +197,7 @@ header h1 {
   text-transform: uppercase;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px; /* Reducir margen inferior para acercar a Juegos Restantes */
 }
 
 /* Placeholder para mantener espacio cuando no hay resultado */
